@@ -24,11 +24,15 @@ const SideBar = ({ session, setSession }) => {
 						</button>
 					</li>
 					<li>
-          <button className={btn} onClick={() => setSession(3)}>
-							{react[3].title.slice(19, react[2].title.length)}
+						<button className={btn} onClick={() => setSession(3)}>
+							{react[3].title.slice(19, react[3].title.length)}
+						</button>
+					</li>
+					<li>
+            <button className={btn} onClick={() => setSession(4)}>
+							{react[4].title.slice(19, react[4].title.length)}
 						</button>
           </li>
-					<li>list-items</li>
 					<li>list-items</li>
 					<li>list-items</li>
 					<li>list-items</li>

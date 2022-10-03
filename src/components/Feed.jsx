@@ -11,21 +11,27 @@ const Feed = ({ session }) => {
 					<h3 className='font-semibold text-4xl text-center mb-6'>
 						{react[session].title}
 					</h3>
-					<h4 className='font-semibold text-2xl'>
-						{react[session].body.intro.title}
-					</h4>
-					{react[session].body.intro.text.map((txt) => (
+					{react[session]?.body?.intro?.title && (
+						<h4 className='font-semibold text-2xl'>
+							{react[session].body.intro.title}
+						</h4>
+					)}
+					{react[session]?.body?.intro?.text?.map((txt) => (
 						<p key={nanoid()} className='text-justify text-lg pl-3'>
 							{txt}
 						</p>
 					))}
 					{react[session].body?.cours?.map((el, index) => (
 						<div className='w-full flex flex-col gap-3' key={nanoid()}>
-							{el?.title && (<h4 className='font-semibold text-2xl border-t-2 pt-8 mt-3'>{el?.title}</h4>)}
+							{el?.title && (
+								<h4 className='font-semibold text-2xl border-t-2 pt-8 mt-3'>
+									{el?.title}
+								</h4>
+							)}
 							{el?.isList
 								? el?.body?.map((item) => (
-									<li className='py-0 pl-10 list-disc'>{item}</li>
-								))
+										<li className='py-0 pl-10 list-disc'>{item}</li>
+								  ))
 								: el?.body?.map((item) => (
 										<p key={nanoid()} className='text-justify text-lg pl-2'>
 											{item}
@@ -33,18 +39,20 @@ const Feed = ({ session }) => {
 								  ))}
 							{el?.img && (
 								<img
-									src={el?.img}
+									src={el?.img.src}
 									alt={el?.title}
-									className='h-[500px] w-[500px] mx-auto'
+									width={el?.img.width}
+									height={el?.img.height}
+									className='mx-auto'
 								/>
 							)}
-								{el?.sample?.map((code) => (
-							<div className='w-full'>
+							{el?.sample?.map((code) => (
+								<div className='w-full'>
 									<SyntaxCode key={nanoid()} language={code?.style}>
 										{code?.code}
 									</SyntaxCode>
-							</div>
-								))}
+								</div>
+							))}
 							{el?.outro?.text?.map((item, index) => (
 								<p key={nanoid()} className='text-justify text-lg pl-3'>
 									{item}

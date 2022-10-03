@@ -240,7 +240,11 @@ export default CssModule;`,
 						`Un composant peut être décomposé davantage et contenir d'autres composants pour constituer des pages comme dans l'image ci-dessous.`,
 						`L'image contient de multiples composants qui constituent un composant page, par exemple une page d'accueil.`,
 					],
-					img: 'https://codippa.com/wp-content/uploads/2019/02/react-component-2.png'
+					img: {
+						src: 'https://codippa.com/wp-content/uploads/2019/02/react-component-2.png',
+						width: 500,
+						height: 500,
+					}
 				},
 				{
 					title: 'Hiérarchie des composants',
@@ -253,7 +257,11 @@ export default CssModule;`,
 						`AddContact contient un composant enfant AddContactForm.`,
 						`ContactList contient aussi un composant enfant ContactCard.`,
 					],
-					img: 'https://storage.googleapis.com/quest_editor_uploads/CywzyRPJDjWtsAQLfXHVQnK7mktTGNwc.png'
+					img: {
+						src: 'https://storage.googleapis.com/quest_editor_uploads/CywzyRPJDjWtsAQLfXHVQnK7mktTGNwc.png',
+						width: 600,
+						height: 500,
+					}
 				},
 				{
 					body: [
@@ -267,7 +275,11 @@ export default CssModule;`,
 					body: [
 						`En divisant l'application en composants, il est possible d'indiquer ces divisions en utilisant des "boîtes" de couleur :`,
 					],
-					img: 'https://images.innoveduc.fr/react/01-introduction-jsx/chat-widget-component-hierarchy.png'
+					img: {
+						src: 'https://images.innoveduc.fr/react/01-introduction-jsx/chat-widget-component-hierarchy.png',
+						width: 600,
+						height: 500
+					}
 				},
 				{
 					body: [
@@ -362,5 +374,155 @@ ReactDOM.render(
 				},
 			],
 		},
+	},
+	{
+		title: `👩‍🏫 React Basics 04 - Ton premier composant React`,
+		body: {
+			intro: {
+				text: [
+					`Maintenant que tu as commencé ton carnet de contacts, tu sais comment écrire du code React, félicitations !`,
+					`Mais il y avait un problème, ou plus particulièrement, un problème de duplication.`,
+					`Peut-être as-tu utilisé le copier-coller pour créer plusieurs contacts ?
+					Et peut-être as-tu utilisé ton code JSX qui est super long ? Et peut-être répétitif (la structure HTML est la même mais avec des informations différentes)`,
+					`Ne verrais-tu pas un moyen plus efficace ?`,
+					`C'est le moment d'introduire de nouveaux concepts :`,
+					`React Components`,
+				]
+			},
+			cours: [
+				{
+					title: `Qu'est-ce qu'un composant React ?`,
+					body: [
+						`C'est un bout de code réutilisable et indépendant.`,
+					]
+				},
+				{
+					title: `Quels sont les différents types de composant en React ?`,
+					body: [
+						`Il existe 2 types de composant :`,
+					]
+				},
+				{
+					isList: true,
+					body: [
+						`Functional components`,
+					]
+				},
+				{
+					body: [
+						`Comme son nom l'indique, ce sont des fonctions Javascript. Elles renvoient du JSX qui est ensuite transformé en élément DOM dans ton navigateur. Tu peux donc définir un composant fonctionnel en utilisant une fonction déclarée ou une fonction anonyme.`,
+					],
+					sample: [
+						{
+							style: 'jsx',
+							code: `function MyComponent() {
+	// Je peux ajouter n'importe quel code en Javascript ici ! 👍 
+	const myName = 'Bob';
+	
+	return (
+		<div>
+			<h1>Je peux écrire ce que je veux ici, c'est du JSX !</h1>
+			<p>Bonjour {myName}</p>
+		</div>
+	);
+	}
+	
+	// Les fonction fléchées fonctionnent également 👍
+	const MyComponent = () => {
+	// Je peux ajouter n'importe quel code en Javascript ici ! 👍 
+	const myName = 'Bob';
+	
+	return (
+		<div>
+			<h1>Je peux écrire ce que je veux ici, c'est du JSX !</h1>
+			<p>Bonjour {myName}</p>
+		</div>
+	);
+	};`
+						}
+					]
+				},
+				{
+					isList: true,
+					body: [
+						`Class components`
+					]
+				},
+				{
+					body: [
+						`Comme son nom l'indique, ce sont des classes Javascript (au lieu de fonctions). Ces classes doivent implémenter une méthode render() afin de renvoyer le code JSX qui sera interprété par le navigateur.`
+					],
+					sample: [
+						{
+							style: 'jsx',
+							code: `class MyComponent {
+render() {
+	// N'oublie pas de retourner de bloc JSX ☝️
+	return (
+		<div>
+			<h1>Je peux écrire ce que je veux ici</h1>
+		</div>
+	);
+}
+}`
+						}
+					]
+				},
+				{
+					body: [
+						`Il y a beaucoup de différences entre les composants fonctionnels et les composants de classe. (mais nous verrons cela un peu plus tard).`,
+						`Pour le moment (et pour soucis de simplicité), nous utiliserons uniquement les composants fonctionnels dans nos exercices.`,
+					],
+				},
+				{
+					title: ' '
+				},
+				{
+					body: [
+						`Chose à ne PAS oublier : Le nom des composants React (fonctionnels ou de classe), doivent toujours commencer par une majuscule. Si tu ne respectes pas ce principe, tu auras l'erreur suivante dans ton navigateur lorsque tu lanceras ton application :`,
+					],
+					img: {
+						src: 'https://images.innoveduc.fr/react/02-component/react-component-name-misspelling.png',
+						width: '100%',
+						height: '90px'
+					}
+				},
+				{
+					body: [
+						`A savoir également, les composants React doivent retourner un et un seul nœud DOM. Si ton composants doit renvoyer plusieurs nœuds DOM, tu devras les encapsuler dans un élément (nœud) parent :`
+					],
+					sample: [
+						{
+							style: 'jsx',
+							code: `const MyComponent = () => {
+	// Ce code générera une erreur 🚫
+	return (
+			<div>
+				<h1>Première div</h1>
+			</div>
+			<div>
+				<h2>Seconde div</h2>
+			</div>
+	);
+};
+
+const MyComponent = () => {
+	// Ce code là sera quand à lui valide ✅
+	return (
+		<div>
+			<div>
+				<h1>Première div</h1>
+			</div>
+			<div>
+				<h2>Seconde div</h2>
+			</div>
+		</div>
+	);
+};`
+						}
+					]
+				}
+			]
+		}
 	},
 ];
