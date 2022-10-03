@@ -223,7 +223,7 @@ export const react = [
 						`- Un composant peut être décomposé davantage et contenir d'autres composants pour constituer des pages comme dans l'image ci-dessous.`,
 						`- L'image contient de multiples composants qui constituent un composant page, par exemple une page d'accueil.`,
 					],
-					img: ''
+					img: 'https://codippa.com/wp-content/uploads/2019/02/react-component-2.png'
 				},
 				{
 					title: 'Hiérarchie des composants',
@@ -235,13 +235,47 @@ export const react = [
 						`- AddContact contient un composant enfant AddContactForm.`,
 						`- ContactList contient aussi un composant enfant ContactCard.`,
 					],
+					img: 'https://storage.googleapis.com/quest_editor_uploads/CywzyRPJDjWtsAQLfXHVQnK7mktTGNwc.png'
 				},
 				{
-					title: 'Hiérarchie des composants 2',
 					body: [
 						`Lorsque des composants sont contenus dans d'autres composants plus haut dans l'arbre (par exemple ContactList contient la ContactCard), il s'agit de relations parent (ContactList) et enfant (ContactCard).
 						Elles sont un élément clé de la construction d'applications React cohérentes et évolutives.`,
 						`Tous les composants peuvent être les parents ou les enfants d'un autre composant (à l'exception de App, qui ne peut être que le parent).`,
+					],
+				},
+				{
+					title: 'Comment diviser une page en composants',
+					body: [
+						`En divisant l'application en composants, il est possible d'indiquer ces divisions en utilisant des "boîtes" de couleur :`,
+					],
+					img: 'https://images.innoveduc.fr/react/01-introduction-jsx/chat-widget-component-hierarchy.png'
+				},
+				{
+					body: [
+						`De cette façon, nous créons une hiérarchie de composants, comme nous l'avons vu dans la section précédente. L'un dans l'autre ! Tout en haut de la hiérarchie se trouve une boîte orange. Elle contient deux cases roses : la "barre latérale" et la "fenêtre de message".`,
+						`À leur tour, ces boîtes contiennent des boîtes violettes, qui elles-mêmes contiennent des boîtes vertes.`,
+						`En d'autres termes, le composant "sidebar" contient le composant "champ de recherche" et le composant "liste de personnes".`,
+						`Ce dernier contient le composant "personne", répété autant de fois que l'utilisateur a de correspondants.`,
+					],
+				},
+				{
+					title: `Pourquoi utilisons-nous des composants ?`,
+					body: [
+						`- Afin d’écrire ton code une fois et de le réutiliser facilement`,
+						`- Par exemple, quand tu écris une Navbar en HTML, tu dois copier et coller ton HTML sur chaque page pour afficher la Navbar.`,
+						`- En utilisant React, tu peux écrire ce "HTML " une fois et l'importer dans toutes les zones de ton application où il est nécessaire. Nous te montrerons un exemple similaire dans les prochaines quêtes.`,
+						`- Tu peux isoler tout le comportement et la présentation de chaque composant sans avoir d'impact sur le reste de l'UI.`,
+						`- En écrivant le composant une fois, cela augmente la réutilisabilité et l'extensibilité.`,
+					],
+				},
+				{
+					title: `☝️ Récapitulatif`,
+					body: [
+						`- Un composant est un élément constitutif d'une application.`,
+						`- Le terme "composant" est utilisé pour désigner un élément ou une section d'une page`,
+						`- La hiérarchie des composants représente un arbre de composants qui, à leur tour, montrent les relations entre les parents et les enfants.`,
+						`- Nous utilisons les composants à des fins de réutilisation et d'évolutivité.`,
 					],
 				},
 			],
