@@ -525,4 +525,28 @@ const MyComponent = () => {
 			]
 		}
 	},
+	{
+		title: `👩‍🏫 React Basics 05 - Que sont les props dans React ?`,
+	},
+	{
+		title: `👩‍🏫 React Basics 06 - Expressions et instruction en JSX`,
+	},
+	{
+		title: `👩‍🏫 React Basics 07 - Create React App`,
+	},
+	{
+		title: `👩‍🏫 React Basics 08 - Importer & Exporter des Composants React`,
+	},
+	{
+		title: `👩‍🏫 React Basics 09 - Mapping Components within React`,
+	},
+	{
+		title: `👩‍🏫 React Basics 10 - Gestion des événements`,
+	},
+	{
+		title: `👩‍🏫 React Basics 11 - State`,
+	},
+	{
+		title: `👩‍🏫 React Basics 12 - Filtrer l'affichage d'une liste`,
+	},
 ];
