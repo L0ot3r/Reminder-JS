@@ -6,7 +6,7 @@ const btn = `bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:
 const SideBar = ({ session, setSession }) => {
 	return (
 		<div className='w-[200px]'>
-			<div className='bg-red-300 h-[88vh]'>
+			<div className='h-[88vh] border-r-2 p-3'>
 				<ul className='flex flex-col items-center gap-2 pt-8'>
 					<li>
 						<button className={btn} onClick={() => setSession(0)}>
@@ -28,6 +28,11 @@ const SideBar = ({ session, setSession }) => {
 							{react[3].title.slice(19, react[2].title.length)}
 						</button>
           </li>
+					<li>list-items</li>
+					<li>list-items</li>
+					<li>list-items</li>
+					<li>list-items</li>
+					<li>list-items</li>
 					<li>list-items</li>
 					<li>list-items</li>
 					<li>list-items</li>

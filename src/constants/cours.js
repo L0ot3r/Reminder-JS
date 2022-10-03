@@ -4,9 +4,10 @@ export const react = [
 		body: {
 			intro: {
 				title: 'Introduction',
-				text: `Le Style de notre application a un impact très important sur l'apparence des composants, l’interaction utilisateur et son ressenti. Il y a de multiples façons de styliser notre application React, et nous allons en examiner quelques-unes. Gardes en tête qu'il n'y a pas de bonne ou de mauvaise façon de styliser : utilise la façon qui s'adapte le mieux à ton projet ! Nous allons aborder quelques méthodes pour styliser une application React, chaque méthode sera suivie d'un exemple de mise en pratique.
-
-					C'est parti ! 🚀`,
+				text: [
+					`Le Style de notre application a un impact très important sur l'apparence des composants, l’interaction utilisateur et son ressenti. Il y a de multiples façons de styliser notre application React, et nous allons en examiner quelques-unes. Gardes en tête qu'il n'y a pas de bonne ou de mauvaise façon de styliser : utilise la façon qui s'adapte le mieux à ton projet ! Nous allons aborder quelques méthodes pour styliser une application React, chaque méthode sera suivie d'un exemple de mise en pratique.`,
+					`C'est parti ! 🚀`
+				],
 			},
 			cours: [
 				{
@@ -147,7 +148,9 @@ export default CssModule;`,
 		body: {
 			intro: {
 				title: 'Introduction',
-				text: `Pour commencer ton voyage dans le monde de React, avant de commencer à écrire du code, tu dois comprendre ce qu'est React, son histoire et ce que tu peux construire en l'utilisant.`,
+				text: [
+					`Pour commencer ton voyage dans le monde de React, avant de commencer à écrire du code, tu dois comprendre ce qu'est React, son histoire et ce que tu peux construire en l'utilisant.`
+				],
 			},
 			cours: [
 				{
@@ -161,22 +164,24 @@ export default CssModule;`,
 				},
 				{
 					title: '📕 La vie avant React',
+					isList: true,
 					body: [
-						`- Avant JavaScript, les navigateurs récupéraient et affichaient les documents HTML depuis le serveur.`,
-						`- Les seules interactions possibles étaient le click sur les liens et la soumission de formulaires.`,
-						`- JavaScript est arrivé en apportant avec lui la manipulation du DOM, ce qui a permis d'avoir des interfaces utilisateur interactives.`,
-						`- La création d'applications utilisant les fonctions natives du DOM est fastidieuse et nécessite une grande quantité de code.`,
-						`- Puis vint la naissance des bibliothèques front-end telles que React & Angular.`,
+						`Avant JavaScript, les navigateurs récupéraient et affichaient les documents HTML depuis le serveur.`,
+						`Les seules interactions possibles étaient le click sur les liens et la soumission de formulaires.`,
+						`JavaScript est arrivé en apportant avec lui la manipulation du DOM, ce qui a permis d'avoir des interfaces utilisateur interactives.`,
+						`La création d'applications utilisant les fonctions natives du DOM est fastidieuse et nécessite une grande quantité de code.`,
+						`Puis vint la naissance des bibliothèques front-end telles que React & Angular.`,
 					],
 				},
 				{
 					title: '🤔 Pourquoi devrais-tu utiliser un Framework/bibliothèque ?',
+					isList: true,
 					body: [
-						`- C'est très rapide. (grâce à son DOM virtuel)`,
-						`- C'est une des librairies front-end les plus populaires. Du coup, il y a beaucoup d'offres d'emploi disponibles.`,
-						`- Cela facilite l'écriture d'applications à grande échelle,`,
-						`- Afin de rendre notre code plus court et plus polyvalent,`,
-						`- Afin d'établir une façon cohérente de programmer dans une équipe de développement en utilisant une bibliothèque standardisée.`,
+						`C'est très rapide. (grâce à son DOM virtuel)`,
+						`C'est une des librairies front-end les plus populaires. Du coup, il y a beaucoup d'offres d'emploi disponibles.`,
+						`Cela facilite l'écriture d'applications à grande échelle,`,
+						`Afin de rendre notre code plus court et plus polyvalent,`,
+						`Afin d'établir une façon cohérente de programmer dans une équipe de développement en utilisant une bibliothèque standardisée.`,
 						`Depuis que Facebook l'a introduit en 2013, React est devenu une bibliothèque front-end très populaire.`,
 					],
 				},
@@ -184,17 +189,27 @@ export default CssModule;`,
 					title: '🔧 Que peux-tu construire avec React ?',
 					body: [
 						`Avec React, tu peux :`,
-						`- Créer ta propre plateforme de streaming comme Netflix`,
-						`- Créer un célèbre réseau social`,
+					],
+				},
+				{
+					isList: true,
+					body: [
+						`Créer ta propre plateforme de streaming comme Netflix`,
+						`Créer un célèbre réseau social`,
+					],
+				},
+				{
+					body: [
 						`Et bien d'autres choses encore...`,
 					],
 				},
 				{
 					title: '☝️ Résumé',
+					isList: true,
 					body: [
-						`- React est utilisé pour construire des interfaces utilisateur ou des composants d'interface utilisateur`,
-						`- Il a été créé pour permettre une programmation cohérente`,
-						`- Avant React, les sites Web étaient interactifs en utilisant la manipulation du DOM en JavaScript`,
+						`React est utilisé pour construire des interfaces utilisateur ou des composants d'interface utilisateur`,
+						`Il a été créé pour permettre une programmation cohérente`,
+						`Avant React, les sites Web étaient interactifs en utilisant la manipulation du DOM en JavaScript`,
 					],
 				},
 			],
@@ -205,35 +220,36 @@ export default CssModule;`,
 		body: {
 			intro: {
 				title: 'Introduction',
-				text: `Dans la quête précédente, tu as découvert ce qu'est React.
-
-				Avant de commencer à coder et à t'entraîner, nous avons un petit pas à faire.
-				
-				Nous devons apprendre ce qu'est un composant React, la philosophie de React ainsi que la hiérarchie de notre application.
-				
-				Débutons !`,
+				text: [
+				`Dans la quête précédente, tu as découvert ce qu'est React.`,
+				`Avant de commencer à coder et à t'entraîner, nous avons un petit pas à faire.`,
+				`Nous devons apprendre ce qu'est un composant React, la philosophie de React ainsi que la hiérarchie de notre application.`,
+				`Débutons ! 🚀`
+			],
 			},
 			cours: [
 				{
 					title: `Qu'est-ce qu'un composant ?`,
+					isList: true,
 					body: [
-						`- Il s'agit essentiellement de blocs qui composent une application.`,
-						`- Le terme "composant" est utilisé pour désigner un élément ou une section d'une page, comme le montre l'image ci-dessous.`,
-						`- Ils divisent et isolent les éléments au sein de l'interface utilisateur à des fins visuelles et comportementales.`,
-						`- Un composant peut être décomposé davantage et contenir d'autres composants pour constituer des pages comme dans l'image ci-dessous.`,
-						`- L'image contient de multiples composants qui constituent un composant page, par exemple une page d'accueil.`,
+						`Il s'agit essentiellement de blocs qui composent une application.`,
+						`Le terme "composant" est utilisé pour désigner un élément ou une section d'une page, comme le montre l'image ci-dessous.`,
+						`Ils divisent et isolent les éléments au sein de l'interface utilisateur à des fins visuelles et comportementales.`,
+						`Un composant peut être décomposé davantage et contenir d'autres composants pour constituer des pages comme dans l'image ci-dessous.`,
+						`L'image contient de multiples composants qui constituent un composant page, par exemple une page d'accueil.`,
 					],
 					img: 'https://codippa.com/wp-content/uploads/2019/02/react-component-2.png'
 				},
 				{
 					title: 'Hiérarchie des composants',
+					isList: true,
 					body: [
-						`- Dans React, il y a une hiérarchie lors de la construction d'une application.`,
-						`- Typiquement, dans la plupart des applications, nous avons un composant racine appelé App, c'est là que tous les autres composants finissent par atteindre l'arbre des composants.`,
-						`- Comme on peut le voir dans le composant App, il y a un composant enfant appelé contacts.`,
-						`- Contacts contient les composants enfants suivants AddContact, ContactList & SearchBar.`,
-						`- AddContact contient un composant enfant AddContactForm.`,
-						`- ContactList contient aussi un composant enfant ContactCard.`,
+						`Dans React, il y a une hiérarchie lors de la construction d'une application.`,
+						`Typiquement, dans la plupart des applications, nous avons un composant racine appelé App, c'est là que tous les autres composants finissent par atteindre l'arbre des composants.`,
+						`Comme on peut le voir dans le composant App, il y a un composant enfant appelé contacts.`,
+						`Contacts contient les composants enfants suivants AddContact, ContactList & SearchBar.`,
+						`AddContact contient un composant enfant AddContactForm.`,
+						`ContactList contient aussi un composant enfant ContactCard.`,
 					],
 					img: 'https://storage.googleapis.com/quest_editor_uploads/CywzyRPJDjWtsAQLfXHVQnK7mktTGNwc.png'
 				},
@@ -261,21 +277,23 @@ export default CssModule;`,
 				},
 				{
 					title: `Pourquoi utilisons-nous des composants ?`,
+					isList: true,
 					body: [
-						`- Afin d’écrire ton code une fois et de le réutiliser facilement`,
-						`- Par exemple, quand tu écris une Navbar en HTML, tu dois copier et coller ton HTML sur chaque page pour afficher la Navbar.`,
-						`- En utilisant React, tu peux écrire ce "HTML " une fois et l'importer dans toutes les zones de ton application où il est nécessaire. Nous te montrerons un exemple similaire dans les prochaines quêtes.`,
-						`- Tu peux isoler tout le comportement et la présentation de chaque composant sans avoir d'impact sur le reste de l'UI.`,
-						`- En écrivant le composant une fois, cela augmente la réutilisabilité et l'extensibilité.`,
+						`Afin d’écrire ton code une fois et de le réutiliser facilement`,
+						`Par exemple, quand tu écris une Navbar en HTML, tu dois copier et coller ton HTML sur chaque page pour afficher la Navbar.`,
+						`En utilisant React, tu peux écrire ce "HTML " une fois et l'importer dans toutes les zones de ton application où il est nécessaire. Nous te montrerons un exemple similaire dans les prochaines quêtes.`,
+						`Tu peux isoler tout le comportement et la présentation de chaque composant sans avoir d'impact sur le reste de l'UI.`,
+						`En écrivant le composant une fois, cela augmente la réutilisabilité et l'extensibilité.`,
 					],
 				},
 				{
 					title: `☝️ Récapitulatif`,
+					isList: true,
 					body: [
-						`- Un composant est un élément constitutif d'une application.`,
-						`- Le terme "composant" est utilisé pour désigner un élément ou une section d'une page`,
-						`- La hiérarchie des composants représente un arbre de composants qui, à leur tour, montrent les relations entre les parents et les enfants.`,
-						`- Nous utilisons les composants à des fins de réutilisation et d'évolutivité.`,
+						`Un composant est un élément constitutif d'une application.`,
+						`Le terme "composant" est utilisé pour désigner un élément ou une section d'une page`,
+						`La hiérarchie des composants représente un arbre de composants qui, à leur tour, montrent les relations entre les parents et les enfants.`,
+						`Nous utilisons les composants à des fins de réutilisation et d'évolutivité.`,
 					],
 				},
 			],
@@ -286,8 +304,10 @@ export default CssModule;`,
 		body: {
 			intro: {
 				title: 'Introduction',
-				text: `Dans cette quête, nous allons découvrir JSX, ainsi que quand et comment l'utiliser.
-				Commençons ! 🚀`,
+				text: [
+					`Dans cette quête, nous allons découvrir JSX, ainsi que quand et comment l'utiliser.`,
+					`Commençons ! 🚀`
+			],
 			},
 			cours: [
 				{
@@ -324,13 +344,18 @@ ReactDOM.render(
 				{
 					body: [
 						`Donc, dans cette exemple :`,
-						`- Il existe une variable appelée name, qui a la valeur de 'John Doe'`,
-						`- Il existe une variable appelée element qui contient un élément div.`,
-						`- Dans cette variable element, tu affiches la valeur de name en utilisant <p>{name}</p>`,
-						`- C'est l'utilisation d'accolades dans JSX te permet d'afficher des valeurs dans le code.`,
-						`- Il existe une méthode appelée ReactDOM.render() et cette méthode prend deux arguments :`,
-						`---Le premier est ce que tu veux afficher dans le navigateur. Dans ce cas, c'est la variable element.`,
-						`---Le second est l'endroit où il sera injecté document.getElementById('root')`,
+					],
+				},
+				{
+					isList: true,
+					body: [
+						`Il existe une variable appelée name, qui a la valeur de 'John Doe'`,
+						`Il existe une variable appelée element qui contient un élément div.`,
+						`Dans cette variable element, tu affiches la valeur de name en utilisant <p>{name}</p>`,
+						`C'est l'utilisation d'accolades dans JSX te permet d'afficher des valeurs dans le code.`,
+						`Il existe une méthode appelée ReactDOM.render() et cette méthode prend deux arguments :`,
+						`- 1 - Le premier est ce que tu veux afficher dans le navigateur. Dans ce cas, c'est la variable element.`,
+						`- 2 - Le second est l'endroit où il sera injecté document.getElementById('root')`,
 					],
 				},
 			],
