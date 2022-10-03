@@ -14,12 +14,14 @@ export const react = [
 					title: '🖌️ Le CSS standard',
 					body: [
 						`C'est la première méthode que nous allons évoquer pour intégrer du CSS dans ton application React. Tu es déjà familier avec cette méthode, car tu l'utilises déjà.`,
-
 						`👍 Avantages : bonnes performances, facile à mettre en œuvre, car tu connais déjà le CSS. S'adapte également bien avec des framework CSS comme Tailwind CSS (tu peux voir le guide d'installation avec CRA [qui marche aussi avec un project vite], ou choisis un autre framework CSS sur State of CSS survey).`,
-
 						`👎 Inconvénients : difficile à maintenir, plus difficile à faire évoluer. Impossible de calculer des styles dynamiques.`,
-
-						`- simplement importer ton fichier CSS dans ton composant:`,
+					],
+				},
+				{
+					isList: true,
+					body: [
+						`simplement importer ton fichier CSS dans ton composant:`,
 					],
 					sample: [
 						{

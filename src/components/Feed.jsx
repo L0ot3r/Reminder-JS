@@ -21,7 +21,7 @@ const Feed = ({ session }) => {
 					))}
 					{react[session].body?.cours?.map((el, index) => (
 						<div className='w-full flex flex-col gap-3' key={nanoid()}>
-							<h4 className='font-semibold text-2xl'>{el?.title}</h4>
+							{el?.title && (<h4 className='font-semibold text-2xl border-t-2 pt-8 mt-3'>{el?.title}</h4>)}
 							{el?.isList
 								? el?.body?.map((item) => (
 									<li className='py-0 pl-10 list-disc'>{item}</li>
