@@ -281,4 +281,59 @@ export default CssModule;`,
 			],
 		},
 	},
+	{
+		title: `👩‍🏫 React Basics 03 - Qu'est-ce que JSX`,
+		body: {
+			intro: {
+				title: 'Introduction',
+				text: `Dans cette quête, nous allons découvrir JSX, ainsi que quand et comment l'utiliser.
+				Commençons ! 🚀`,
+			},
+			cours: [
+				{
+					title: `Qu'est-ce que JSX ?`,
+					body: [
+						`JavaSscript XML. Il ajoute des fonctionnalités XML à JavaScript. Cela signifie que tu vas désormais pouvoir mélanger JavaScript avec des balises HTML (fonctionnalités telles que HTML) et des fonctionnalités XML (comme les accolades de données). Juste comme ça :`,
+					],
+					sample: [{
+						style: 'jsx',
+						code: `<div>
+	<h1>I am HTML 1+1=2</h1>
+	<h2>{"I am data from XML, I'll do match operation:"} {1+1}</h2>						
+</div>`
+					}]
+				},
+				{
+					body: [
+						`Voyons un autre exemple. Le code ci-dessous montre comment tu peux définir une constante javascript (const name = 'John'), une balise <div /> et les mélanger à l'aide d'un <p>{name}</p>`,
+					],
+					sample: [
+						{style: 'jsx', code: `const name ='John Doe';
+const element = (
+	<div className="person-item">
+			<p>{name}</p>
+	</div>
+);
+
+ReactDOM.render(
+	element,
+	document.getElementById('root')
+);`}
+					]
+				},
+				{
+					body: [
+						`Donc, dans cette exemple :`,
+						`- Il existe une variable appelée name, qui a la valeur de 'John Doe'`,
+						`- Il existe une variable appelée element qui contient un élément div.`,
+						`- Dans cette variable element, tu affiches la valeur de name en utilisant <p>{name}</p>`,
+						`- C'est l'utilisation d'accolades dans JSX te permet d'afficher des valeurs dans le code.`,
+						`- Il existe une méthode appelée ReactDOM.render() et cette méthode prend deux arguments :`,
+						`---Le premier est ce que tu veux afficher dans le navigateur. Dans ce cas, c'est la variable element.`,
+						`---Le second est l'endroit où il sera injecté document.getElementById('root')`,
+					],
+				},
+			],
+		},
+	},
 ];
