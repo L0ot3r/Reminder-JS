@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Feed from './components/Feed';
+import Navbar from './components/Navbar';
+import SideBar from './components/SideBar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const [session, setSession] = useState(0)
+	return (
+		<>
+			<Navbar />
+			<div className='flex'>
+				<SideBar session={session} setSession={setSession} />
+				<Feed session={session} />
+			</div>
+		</>
+	);
+};
 
 export default App;
