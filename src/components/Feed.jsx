@@ -1,9 +1,13 @@
 import React from 'react';
 import SyntaxCode from './SyntaxCode';
-import { react } from '../constants/cours';
+import { react, js } from '../constants/cours';
 import { nanoid } from 'nanoid';
 
 const Feed = ({ session }) => {
+
+	const reactSession = react
+	const jsSession = js
+
 	return (
 		<div className='w-full'>
 			<div className='h-auto w-full flex flex-col gap-3 justify-center items-center p-5'>
@@ -30,7 +34,7 @@ const Feed = ({ session }) => {
 							)}
 							{el?.isList
 								? el?.body?.map((item) => (
-										<li className='py-0 pl-10 list-disc'>{item}</li>
+										<li key={nanoid()} className='py-0 pl-10 list-disc'>{item}</li>
 								  ))
 								: el?.body?.map((item) => (
 										<p key={nanoid()} className='text-justify text-lg pl-2'>
@@ -47,8 +51,8 @@ const Feed = ({ session }) => {
 								/>
 							)}
 							{el?.sample?.map((code) => (
-								<div className='w-full'>
-									<SyntaxCode key={nanoid()} language={code?.style}>
+								<div className='w-full' key={nanoid()}>
+									<SyntaxCode language={code?.style}>
 										{code?.code}
 									</SyntaxCode>
 								</div>

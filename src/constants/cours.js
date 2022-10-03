@@ -1,6 +1,7 @@
 export const react = [
 	{
 		title: 'Le CSS dans React',
+		btnSlug: 'Le CSS dans React',
 		body: {
 			intro: {
 				title: 'Introduction',
@@ -147,6 +148,7 @@ export default CssModule;`,
 	},
 	{
 		title: `👩‍🏫 React Basics 01 - Qu'est-ce que React ?`,
+		btnSlug: `Qu'est-ce que React ?`,
 		body: {
 			intro: {
 				title: 'Introduction',
@@ -219,6 +221,7 @@ export default CssModule;`,
 	},
 	{
 		title: `👩‍🏫 React Basics 02 - Qu'est-ce qu'un composant ?`,
+		btnSlug: `Qu'est-ce qu'un composant ?`,
 		body: {
 			intro: {
 				title: 'Introduction',
@@ -315,6 +318,7 @@ export default CssModule;`,
 	},
 	{
 		title: `👩‍🏫 React Basics 03 - Qu'est-ce que JSX`,
+		btnSlug: `Qu'est-ce que JSX`,
 		body: {
 			intro: {
 				title: 'Introduction',
@@ -377,6 +381,7 @@ ReactDOM.render(
 	},
 	{
 		title: `👩‍🏫 React Basics 04 - Ton premier composant React`,
+		btnSlug: `Ton premier composant React`,
 		body: {
 			intro: {
 				text: [
@@ -527,26 +532,57 @@ const MyComponent = () => {
 	},
 	{
 		title: `👩‍🏫 React Basics 05 - Que sont les props dans React ?`,
+		btnSlug: `Que sont les props dans React ?`,
 	},
 	{
 		title: `👩‍🏫 React Basics 06 - Expressions et instruction en JSX`,
+		btnSlug: `Expressions et instruction en JSX`,
 	},
 	{
 		title: `👩‍🏫 React Basics 07 - Create React App`,
+		btnSlug: 'Create React App',
 	},
 	{
 		title: `👩‍🏫 React Basics 08 - Importer & Exporter des Composants React`,
+		btnSlug: 'Importer & Exporter des Composants React',
 	},
 	{
 		title: `👩‍🏫 React Basics 09 - Mapping Components within React`,
+		btnSlug: 'Mapping Components within React',
 	},
 	{
 		title: `👩‍🏫 React Basics 10 - Gestion des événements`,
+		btnSlug: 'Gestion des événements',
 	},
 	{
 		title: `👩‍🏫 React Basics 11 - State`,
+		btnSlug: 'State',
 	},
 	{
 		title: `👩‍🏫 React Basics 12 - Filtrer l'affichage d'une liste`,
+		btnSlug: `Filtrer l'affichage d'une liste`,
 	},
 ];
+
+export const js = [
+	{
+		title: 'Javascript 1',
+		btnSlug: 'Javascript 1',
+	},
+	{
+		title: 'Javascript 2',
+		btnSlug: 'Javascript 2',
+	},
+	{
+		title: 'Javascript 3',
+		btnSlug: 'Javascript 3',
+	},
+	{
+		title: 'Javascript 4',
+		btnSlug: 'Javascript 4',
+	},
+	{
+		title: 'Javascript 5',
+		btnSlug: 'Javascript 5',
+	},
+]

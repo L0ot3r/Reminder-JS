@@ -5,11 +5,12 @@ import SideBar from './components/SideBar';
 
 const App = () => {
 	const [session, setSession] = useState(0)
+	const [categories, setCategories] = useState('react')
 	return (
 		<>
-			<Navbar />
+			<Navbar categories={categories} setCategories={setCategories} />
 			<div className='flex max-w-7xl mx-auto'>
-				<SideBar session={session} setSession={setSession} />
+				<SideBar session={session} setSession={setSession} categories={categories} />
 				<Feed session={session} />
 			</div>
 		</>

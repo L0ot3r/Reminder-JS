@@ -25,21 +25,3 @@ code {
     monospace;
 }
 
-.keyword {
-  @apply text-purple-400
-}
-.ponctuation {
-  @apply text-gray-500
-}
-.tag {
-  @apply text-blue-500
-}
-.attr-name {
-  @apply text-blue-300
-}
-.attr-string {
-  @apply text-yellow-600
-}
-.attr-number {
-  @apply text-green-300
-}
