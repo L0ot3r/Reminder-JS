@@ -8,7 +8,7 @@ const App = () => {
 	return (
 		<>
 			<Navbar />
-			<div className='flex'>
+			<div className='flex max-w-7xl mx-auto'>
 				<SideBar session={session} setSession={setSession} />
 				<Feed session={session} />
 			</div>
