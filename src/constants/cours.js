@@ -24,12 +24,12 @@ export const react = [
 						{
 							style: 'jsx',
 							code: `// Example.js
-	import React from 'react';
-	import "./App.css";
+import React from 'react';
+import "./App.css";
 
-	export default function App(){
-		return <div className="my-class">Hello world</div>
-	}`,
+export default function App(){
+	return <div className="my-class">Hello world</div>
+}`,
 						},
 					],
 					outro: {
@@ -43,8 +43,8 @@ export const react = [
 						sample: {
 							style: 'css',
 							code: `.my-class{
-		color: red;
-	}`,
+	color: red;
+}`,
 						},
 					},
 				},
@@ -63,28 +63,28 @@ export const react = [
 						{
 							style: 'jsx',
 							code: `// InLineStyle.js
-	import React from 'react';
+import React from 'react';
 
-	const InLineStyle = () => {
-		const container = {
-			display: 'flex',
-			flexDirection: 'column',
-			alignItems: 'center',
-			justifyContent: 'center',
-			width: '100%',
-			padding: '50px',
-			color: '#444',
-			border: '1px solid #1890ff',
-		}
-
-		return (
-			<div style={container}>
-				<h1 style={{color: '#0d1a26', fontWeight: 400}}>Hey! We're using inline style!</h1>
-			</div>
-		)
+const InLineStyle = () => {
+	const container = {
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		justifyContent: 'center',
+		width: '100%',
+		padding: '50px',
+		color: '#444',
+		border: '1px solid #1890ff',
 	}
 
-	export default InLineStyle;`,
+	return (
+		<div style={container}>
+			<h1 style={{color: '#0d1a26', fontWeight: 400}}>Hey! We're using inline style!</h1>
+		</div>
+	)
+}
+
+export default InLineStyle;`,
 						},
 					],
 				},
@@ -103,39 +103,39 @@ export const react = [
 						{
 							style: 'jsx',
 							code: `// CssModule.js
-	import React from 'react';
-	import styles from './css.module.css'
+import React from 'react';
+import styles from './css.module.css'
 
-	const CssModule = () => {
-		return (
-			<div className={styles.container}>
-				<h1 className={styles.title}>Example Css Module.</h1>
-				<button className={styles.button}>Button</button>
-			</div>
-		);
-	};
+const CssModule = () => {
+	return (
+		<div className={styles.container}>
+			<h1 className={styles.title}>Example Css Module.</h1>
+			<button className={styles.button}>Button</button>
+		</div>
+	);
+};
 
-	export default CssModule;`,
+export default CssModule;`,
 						},
 						{
 							style: 'css',
 							code: `/* css.module.css */
 
-	.container {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-	}
+.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+}
 
-	.title {
-			color: red;
-			font-weight: 700;
-	}
+.title {
+		color: red;
+		font-weight: 700;
+}
 
-	.button {
-			background-color: #000000;
-			width: 60px;
-	}`,
+.button {
+		background-color: #000000;
+		width: 60px;
+}`,
 						},
 					],
 				},
