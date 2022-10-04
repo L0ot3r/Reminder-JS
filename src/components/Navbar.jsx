@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const btn = `
   w-full 
@@ -15,18 +15,40 @@ const btn = `
   rounded
 `;
 
-const Navbar = ({ setCategories }) => {
-  return (
-    <div className='w-full flex justify-between p-5 bg-slate-600 text-white sticky top-0'>
-      <h1>Reminder JS</h1>
-      <ul className='flex gap-3'>
-        <li><button className={btn} onClick={() => {}} >HTML</button></li>
-        <li><button className={btn} onClick={() => {}} >CSS</button></li>
-        <li><button className={btn} onClick={() => setCategories('js')} >JS</button></li>
-        <li><button className={btn} onClick={() => setCategories('react')} >REACT</button></li>
-      </ul>
-    </div>
-  )
-}
+const Navbar = ({ setCategories, setSession }) => {
+	return (
+		<div className='w-full flex justify-between p-5 bg-slate-600 text-white sticky top-0'>
+			<h1>Reminder JS</h1>
+			<ul className='flex gap-3'>
+				<li>
+					<button className={btn} onClick={() => {}}>
+						HTML
+					</button>
+				</li>
+				<li>
+					<button className={btn} onClick={() => {}}>
+						CSS
+					</button>
+				</li>
+				<li>
+					<button
+						className={btn}
+						onClick={() => [setCategories('js'), setSession(0)]}
+					>
+						JS
+					</button>
+				</li>
+				<li>
+					<button
+						className={btn}
+						onClick={() => [setCategories('react'), setSession(0)]}
+					>
+						REACT
+					</button>
+				</li>
+			</ul>
+		</div>
+	);
+};
 
-export default Navbar
+export default Navbar;

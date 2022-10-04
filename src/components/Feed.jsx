@@ -1,31 +1,24 @@
 import React from 'react';
 import SyntaxCode from './SyntaxCode';
-import { react, js } from '../constants/cours';
+import { data } from '../constants/cours';
 import { nanoid } from 'nanoid';
 
-const Feed = ({ session }) => {
+const Feed = ({ session, categories }) => {
+	const categorie = data.filter((item) => item.categorie === categories);
 
-	const reactSession = react
-	const jsSession = js
+	const cours = categorie[0].cours;
 
 	return (
 		<div className='w-full'>
 			<div className='h-auto w-full flex flex-col gap-3 justify-center items-center p-5'>
 				<div className='p-5 flex flex-col gap-4'>
 					<h3 className='font-semibold text-4xl text-center mb-6'>
-						{react[session].title}
+						{cours[session]?.title}
 					</h3>
-					{react[session]?.body?.intro?.title && (
-						<h4 className='font-semibold text-2xl'>
-							{react[session].body.intro.title}
-						</h4>
-					)}
-					{react[session]?.body?.intro?.text?.map((txt) => (
-						<p key={nanoid()} className='text-justify text-lg pl-3'>
-							{txt}
-						</p>
-					))}
-					{react[session].body?.cours?.map((el, index) => (
+					<h4 className='font-semibold text-2xl'>
+						{cours[session]?.body?.subtitle}
+					</h4>
+					{cours[session].body?.text?.map((el) => (
 						<div className='w-full flex flex-col gap-3' key={nanoid()}>
 							{el?.title && (
 								<h4 className='font-semibold text-2xl border-t-2 pt-8 mt-3'>
@@ -34,7 +27,9 @@ const Feed = ({ session }) => {
 							)}
 							{el?.isList
 								? el?.body?.map((item) => (
-										<li key={nanoid()} className='py-0 pl-10 list-disc'>{item}</li>
+										<li key={nanoid()} className='py-0 pl-10 list-disc'>
+											{item}
+										</li>
 								  ))
 								: el?.body?.map((item) => (
 										<p key={nanoid()} className='text-justify text-lg pl-2'>
@@ -52,23 +47,9 @@ const Feed = ({ session }) => {
 							)}
 							{el?.sample?.map((code) => (
 								<div className='w-full' key={nanoid()}>
-									<SyntaxCode language={code?.style}>
-										{code?.code}
-									</SyntaxCode>
+									<SyntaxCode language={code?.style}>{code?.code}</SyntaxCode>
 								</div>
 							))}
-							{el?.outro?.text?.map((item, index) => (
-								<p key={nanoid()} className='text-justify text-lg pl-3'>
-									{item}
-								</p>
-							))}
-							{el?.outro?.sample && (
-								<div className='w-full'>
-									<SyntaxCode language={el?.outro?.sample?.style}>
-										{el?.outro?.sample?.code}
-									</SyntaxCode>
-								</div>
-							)}
 						</div>
 					))}
 				</div>
