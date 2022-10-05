@@ -10,14 +10,14 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 	const subtitle = cours[session]?.body?.subtitle?.color;
 
 	return (
-		<div className='w-full flex items-start'>
+		<div className=' h-auto w-full flex items-start'>
 			<SideBar
 				session={session}
 				setSession={setSession}
 				categories={categories}
 				setCategories={setCategories}
 			/>
-			<div className='h-auto w-full flex flex-col gap-4 justify-center items-start p-6'>
+			<div className='w-full flex flex-col gap-4 justify-center items-start p-6'>
 				<h2 className='font-semibold text-4xl w-full text-center mb-6'>
 					{cours[session]?.title}
 				</h2>

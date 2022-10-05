@@ -17,7 +17,7 @@ const btn = `
 
 const Navbar = ({ setCategories, setSession }) => {
 	return (
-		<div className='z-50 w-full bg-slate-600'>
+		<div className='z-50 w-full bg-[#f76c6c]'>
 			<div className='max-w-7xl mx-auto flex justify-between items-center p-5 text-white'>
 			<h1 className='text-2xl'>Reminder JS</h1>
 			<ul className='flex gap-3'>

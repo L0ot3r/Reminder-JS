@@ -23,8 +23,8 @@ const SideBar = ({ setSession, categories }) => {
 
 
 	return (
-		<aside className='w-auto'>
-			<div className='w-full min-w-[180px] h-screen border-r-2 border-slate-300 px-4'>
+		<aside className='w-auto h-full bg-[#ffe6e6]'>
+			<div className='w-full h-full min-w-[180px] border-r-2 border-slate-300 px-4'>
 				<ul className='sticky flex flex-col items-center gap-2 pt-5 top-[40px]'>
 					{cours.map((el, index) => (
 						<li key={el.btnSlug} className='w-full'>
