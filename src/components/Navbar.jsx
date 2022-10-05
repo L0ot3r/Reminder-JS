@@ -17,10 +17,11 @@ const btn = `
 
 const Navbar = ({ setCategories, setSession }) => {
 	return (
-		<div className='w-full flex justify-between p-5 bg-slate-600 text-white sticky top-0'>
-			<h1>Reminder JS</h1>
+		<div className='z-50 w-full bg-slate-600'>
+			<div className='max-w-7xl mx-auto flex justify-between items-center p-5 text-white'>
+			<h1 className='text-2xl'>Reminder JS</h1>
 			<ul className='flex gap-3'>
-				<li>
+				{/* <li>
 					<button className={btn} onClick={() => {}}>
 						HTML
 					</button>
@@ -29,7 +30,7 @@ const Navbar = ({ setCategories, setSession }) => {
 					<button className={btn} onClick={() => {}}>
 						CSS
 					</button>
-				</li>
+				</li> */}
 				<li>
 					<button
 						className={btn}
@@ -47,6 +48,7 @@ const Navbar = ({ setCategories, setSession }) => {
 					</button>
 				</li>
 			</ul>
+			</div>
 		</div>
 	);
 };

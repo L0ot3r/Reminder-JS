@@ -1,7 +1,21 @@
 import React from 'react';
 import { data } from '../constants/cours';
 
-const btn = `w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded`;
+const btn = `
+	w-full 
+	py-2 
+	px-4 
+	font-semibold 
+	bg-transparent 
+	hover:bg-purple-600 
+	text-blue-700 
+	hover:text-white 
+	border 
+	hover:border-transparent 
+	border-blue-500 
+	rounded
+	transition ease-in-out duration-500
+`;
 
 const SideBar = ({ setSession, categories }) => {
 	const categorie = data.filter((item) => item.categorie === categories);
@@ -9,9 +23,9 @@ const SideBar = ({ setSession, categories }) => {
 
 
 	return (
-		<div className='w-[260px]'>
-			<div className='h-[92vh] border-r-2 p-3'>
-				<ul className='w-full flex flex-col items-center gap-2 pt-8'>
+		<aside className='w-auto'>
+			<div className='w-full min-w-[180px] h-screen border-r-2 border-slate-300 px-4'>
+				<ul className='sticky flex flex-col items-center gap-2 pt-5 top-[40px]'>
 					{cours.map((el, index) => (
 						<li key={el.btnSlug} className='w-full'>
 							<button className={btn} onClick={() => setSession(index)}>
@@ -21,7 +35,7 @@ const SideBar = ({ setSession, categories }) => {
 					))}
 				</ul>
 			</div>
-		</div>
+		</aside>
 	);
 };
 

@@ -6,7 +6,9 @@ export const data = [
 				title: 'Javascript 1',
 				btnSlug: 'Javascript 1',
 				body: {
-					subtitle: 'Débuter en Javascript',
+					subtitle: {
+						txt: 'Débuter en Javascript',
+					}, 
 					text: [
 						{
 							body: [
@@ -19,7 +21,7 @@ export const data = [
 							},
 							sample: [
 								{
-									style: 'js',
+									style: 'jsx',
 									code: `import React from 'react;
 						
 export const App = () => {
@@ -42,7 +44,9 @@ export default App;`,
 				title: 'Javascript 2',
 				btnSlug: 'Javascript 2',
 				body: {
-					subtitle: 'Continuer en Javascript',
+					subtitle: {
+						txt: 'Continuer en Javascript',
+					}, 
 					text: [
 						{
 							body: [
@@ -50,7 +54,7 @@ export default App;`,
 							],
 							sample: [
 								{
-									style: 'js',
+									style: 'jsx',
 									code: `import React from 'react;
 						
 export const App = () => {
@@ -86,7 +90,10 @@ export default App;`,
 				title: '👩‍🏫 Le CSS dans React',
 				btnSlug: 'Le CSS dans React',
 				body: {
-					subtitle: 'Introduction',
+					subtitle: {
+						color: 'text-red-500',
+						txt: 'Introduction',
+					}, 
 					text: [
 						{
 							body: [
@@ -105,7 +112,9 @@ export default App;`,
 							],
 						},
 						{
-							title: `🖌️ Le CSS standard`,
+							title: {
+								txt: `🖌️ Le CSS standard`,
+							}, 
 							body: [
 								`C'est la première méthode que nous allons évoquer pour intégrer du CSS dans ton application React. Tu es déjà familier avec cette méthode, car tu l'utilises déjà.`,
 								`👍 Avantages : bonnes performances, facile à mettre en œuvre, car tu connais déjà le CSS. S'adapte également bien avec des framework CSS comme Tailwind CSS (tu peux voir le guide d'installation avec CRA [qui marche aussi avec un project vite], ou choisis un autre framework CSS sur State of CSS survey).`,
@@ -138,7 +147,7 @@ export default function App(){
 							],
 						},
 						{
-							title: ' ',
+							hr: true,
 							body: [
 								'Et ton App.css ressemblerait à ceci:'
 							],
@@ -152,7 +161,9 @@ export default function App(){
 							],
 						},
 						{
-							title: '🎨 Intégrer le CSS',
+							title: {
+								txt: '🎨 Intégrer le CSS',
+							}, 
 							body: [
 								`Tout comme en HTML, nous pouvons utiliser l'attribut style dans notre application React pour appliquer notre CSS, mais avec quelques légères différences : au lieu d'appliquer des propriétés avec des classes ou des ID CSS, nous les passons directement aux éléments JSX en tant qu'objet. De plus, les propriétés doivent être en camelCase.`,
 								`👍 Avantages : comme nous avons affaire à un objet, nous pouvons l'étendre et ajouter d'autres propriétés, changer les valeurs de manière conditionnelle.`,
@@ -160,7 +171,7 @@ export default function App(){
 							]
 						},
 						{
-							title: ' ',
+							hr: true,
 							body: [
 								`L'exemple suivant, illustre comment nous créons un composant React (ligne 4), comment nous créons les styles pour ce composant (ligne 5), et comment appliquer ces styles au composant (ligne 17)`,
 							],
@@ -195,7 +206,9 @@ export default InLineStyle;`
 							],
 						},
 						{
-							title: `🖼️ Les Modules CSS`,
+							title: {
+								txt: `🖼️ Les Modules CSS`,
+							}, 
 							body: [
 								`Les Modules CSS t'aideront à faire en sorte que les classes CSS aient une portée locale pour un composant, évitant ainsi les conflits de noms de classes que tu pourrais répéter dans ton application. Tu peux également ajouter des classes globales en utilisant :global devant le nom de la classe.`,
 								`Ils sont mis en œuvre de la même manière que le CSS normal. Tu dois définir un fichier externe (e.g. App.module.css). Importe-le dans ton composant. Et utilise l'attribut className pour définir les classes.`,
@@ -254,7 +267,10 @@ export default CssModule;
 				title: `👩‍🏫 React Basics 01 - Qu'est-ce que React ?`,
 				btnSlug: `Qu'est-ce que React ?`,
 				body: {
-					subtitle: 'Introduction',
+					subtitle: {
+						color: 'text-red-500',
+						txt: 'Introduction',
+					}, 
 					text: [
 						{
 							body: [
@@ -262,7 +278,9 @@ export default CssModule;
 							],
 						},
 						{
-							title: `📖 Définition`,
+							title: {
+								txt: `📖 Définition`,
+							}, 
 							body: [
 								`React est une bibliothèque JavaScript open-source construite / maintenue par Facebook ainsi que par une communauté de développeurs individuels et d'entreprises.`,
 								`Son but est de construire des interfaces utilisateurs ou des composants d'interface utilisateur (une prochaine quête expliquera ce que sont les composants).
@@ -270,7 +288,9 @@ export default CssModule;
 							],
 						},
 						{
-							title: `📕 La vie avant React`,
+							title: {
+								txt: `📕 La vie avant React`,
+							}, 
 							isList: true,
 							body: [
 								`Avant JavaScript, les navigateurs récupéraient et affichaient les documents HTML depuis le serveur.`,
@@ -281,7 +301,9 @@ export default CssModule;
 							],
 						},
 						{
-							title: `🤔 Pourquoi devrais-tu utiliser un Framework/bibliothèque ?`,
+							title: {
+								txt: `🤔 Pourquoi devrais-tu utiliser un Framework/bibliothèque ?`,
+							}, 
 							isList: true,
 							body: [
 								`C'est très rapide. (grâce à son DOM virtuel)`,
@@ -297,7 +319,9 @@ export default CssModule;
 							]
 						},
 						{
-							title: `🔧 Que peux-tu construire avec React ?`,
+							title: {
+								txt: `🔧 Que peux-tu construire avec React ?`,
+							}, 
 							body: [
 								`Avec React, tu peux :`
 							]
@@ -321,7 +345,10 @@ export default CssModule;
 				title: `👩‍🏫 React Basics 02 - Qu'est-ce qu'un composant ?`,
 				btnSlug: `Qu'est-ce qu'un composant ?`,
 				body: {
-					subtitle: `Introduction`,
+					subtitle: {
+						color: 'text-red-500',
+						txt: `Introduction`,
+					}, 
 					text: [
 						{
 							body: [
@@ -332,7 +359,9 @@ export default CssModule;
 							]
 						},
 						{
-							title: `Qu'est-ce qu'un composant ?`,
+							title: {
+								txt: `Qu'est-ce qu'un composant ?`,
+							}, 
 							isList: true,
 							body: [
 								`Il s'agit essentiellement de blocs qui composent une application.`,
@@ -348,7 +377,9 @@ export default CssModule;
 							}
 						},
 						{
-							title: `Hiérarchie des composants`,
+							title: {
+								txt: `Hiérarchie des composants`,
+							}, 
 							isList: true,
 							body: [
 								`Dans React, il y a une hiérarchie lors de la construction d'une application.`,
@@ -372,7 +403,9 @@ export default CssModule;
 							]
 						},
 						{
-							title: `Comment diviser une page en composants`,
+							title: {
+								txt: `Comment diviser une page en composants`,
+							}, 
 							body: [
 								`En divisant l'application en composants, il est possible d'indiquer ces divisions en utilisant des "boîtes" de couleur :`
 							],
@@ -390,7 +423,9 @@ export default CssModule;
 							]
 						},
 						{
-							title: `Pourquoi utilisons-nous des composants ?`,
+							title: {
+								txt: `Pourquoi utilisons-nous des composants ?`,
+							}, 
 							isList: true,
 							body: [
 								`Afin d’écrire ton code une fois et de le réutiliser facilement`,
@@ -401,7 +436,9 @@ export default CssModule;
 							]
 						},
 						{
-							title: `☝️ Récapitulatif`,
+							title: {
+								txt: `☝️ Récapitulatif`,
+							}, 
 							isList: true,
 							body: [
 								`Un composant est un élément constitutif d'une application.`,
@@ -417,7 +454,10 @@ export default CssModule;
 				title: `👩‍🏫 React Basics 03 - Qu'est-ce que JSX`,
 				btnSlug: `Qu'est-ce que JSX`,
 				body: {
-					subtitle: 'Introduction',
+					subtitle: {
+						color: 'text-red-500',
+						txt: 'Introduction',
+					}, 
 					text: [
 						{
 							body: [
@@ -430,7 +470,9 @@ export default CssModule;
 							}
 						},
 						{
-							title: `Qu'est-ce que JSX ?`,
+							title: {
+								txt: `Qu'est-ce que JSX ?`,
+							}, 
 							body: [
 								`JavaSscript XML. Il ajoute des fonctionnalités XML à JavaScript. Cela signifie que tu vas désormais pouvoir mélanger JavaScript avec des balises HTML (fonctionnalités telles que HTML) et des fonctionnalités XML (comme les accolades de données). Juste comme ça :`
 							],
@@ -445,7 +487,7 @@ export default CssModule;
 							]
 						},
 						{
-							title: ' ',
+							hr: true,
 							body: [
 								`Voyons un autre exemple. Le code ci-dessous montre comment tu peux définir une constante javascript (const name = 'John'), une balise <div /> et les mélanger à l'aide d'un <p>{name}</p>`,
 							],
@@ -493,7 +535,7 @@ ReactDOM.render(
 				body: {
 					text: [
 						{
-							title: ' ',
+							hr: true,
 							body: [
 								`Maintenant que tu as commencé ton carnet de contacts, tu sais comment écrire du code React, félicitations !`,
 								`Mais il y avait un problème, ou plus particulièrement, un problème de duplication.`,
@@ -505,13 +547,19 @@ ReactDOM.render(
 							]
 						},
 						{
-							title: `Qu'est-ce qu'un composant React ?`,
+							title: {
+								color: 'text-red-500',
+								txt: `Qu'est-ce qu'un composant React ?`,
+							}, 
 							body: [
 								`C'est un bout de code réutilisable et indépendant.`
 							]
 						},
 						{
-							title: `Quels sont les différents types de composant en React ?`,
+							title: {
+								color: 'text-red-500',
+								txt: `Quels sont les différents types de composant en React ?`,
+							}, 
 							body: [
 								`Il existe 2 types de composant :`
 							]
@@ -584,7 +632,7 @@ ReactDOM.render(
 							]
 						},
 						{
-							title: ' ',
+							hr: true,
 							body: [
 								`Chose à ne PAS oublier : Le nom des composants React (fonctionnels ou de classe), doivent toujours commencer par une majuscule. Si tu ne respectes pas ce principe, tu auras l'erreur suivante dans ton navigateur lorsque tu lanceras ton application :`
 							],
