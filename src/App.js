@@ -3,7 +3,7 @@ import { Feed, Navbar } from './components';
 
 const App = () => {
 	const [session, setSession] = useState(0);
-	const [categories, setCategories] = useState('js');
+	const [categories, setCategories] = useState('react');
 	return (
 		<div>
 			<Navbar 

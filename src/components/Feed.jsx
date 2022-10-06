@@ -49,14 +49,14 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 						{el?.isList &&
 							el?.body?.map((item) => (
 								<li key={nanoid()} className={`py-0 pl-10 list-disc ${item.bold && 'font-bold'}`}>
-									{item.txt}
+									{item?.txt}
 								</li>
 							))}
 
 						{/* TEXTE NORMAL */}
 						{el?.body?.map((item) => (
-							<p key={nanoid()} className={`text-justify text-lg pl-2 ${item.bold && 'font-bold'}`}>
-								{item.txt}
+							<p key={nanoid()} className={`text-justify md:text-left text-lg pl-2 ${item.bold && 'font-bold'}`}>
+								{item?.txt}
 							</p>
 						))}
 

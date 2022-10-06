@@ -1,5 +1,6 @@
 import React from 'react';
 import { data } from '../constants/cours';
+import { VscNotebook } from 'react-icons/vsc';
 
 const btn = `
 	w-full 
@@ -21,22 +22,41 @@ const SideBar = ({ setSession, categories }) => {
 	const categorie = data.filter((item) => item.categorie === categories);
 	const cours = categorie[0].cours;
 
-
 	return (
-		<aside className='w-auto h-full bg-[#ffe6e6]'>
-			<div className='w-full h-full min-w-[180px] border-r-2 border-slate-300 px-4'>
-				<ul className='sticky flex flex-col items-center gap-2 pt-5 top-[40px]'>
+		<aside className='w-[50px] h-full border-r-2 border-slate-300'>
+			<ul className='sticky flex flex-col items-center gap-2 pt-5 p-3 pl-0 top-[40px]'>
 					{cours.map((el, index) => (
-						<li key={el.btnSlug} className='w-full'>
-							<button className={btn} onClick={() => setSession(index)}>
-								{el.btnSlug}
-							</button>
+						<li key={el.btnSlug} className='list-aside'>
+							<div className='container-btn-aside'>
+								<VscNotebook className='icons-side' size={30} />
+								<button
+									className='list-aside-btn'
+									onClick={() => setSession(index)}
+								>
+									{el.btnSlug}
+								</button>
+							</div>
 						</li>
 					))}
-				</ul>
-			</div>
+			</ul>
 		</aside>
 	);
+
+	// return (
+	// 	<aside className='w-auto h-full bg-[#ffe6e6]'>
+	// 		<div className='w-full h-full min-w-[180px] border-r-2 border-slate-300 px-4'>
+	// 			<ul className='sticky flex flex-col items-center gap-2 pt-5 top-[40px]'>
+	// 				{cours.map((el, index) => (
+	// 					<li key={el.btnSlug} className='w-full'>
+	// 						<button className={btn} onClick={() => setSession(index)}>
+	// 							{el.btnSlug}
+	// 						</button>
+	// 					</li>
+	// 				))}
+	// 			</ul>
+	// 		</div>
+	// 	</aside>
+	// );
 };
 
 export default SideBar;
