@@ -17,24 +17,24 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 				categories={categories}
 				setCategories={setCategories}
 			/>
-			<div className='w-full flex flex-col gap-4 justify-center items-start p-6'>
-				<h2 className='font-semibold text-4xl w-full text-center mb-6'>
+			<div className='w-full flex flex-col gap-4 justify-center items-start p-6 md:p-2'>
+				<h2 className='font-semibold text-4xl md:text-2xl w-full text-center mb-6'>
 					{cours[session]?.title}
 				</h2>
 				<h4
-					className={`font-semibold text-2xl ${
+					className={`font-semibold text-2xl md:text-xl ${
 						cours[session]?.body?.subtitle?.color ? subtitle : 'text-black'
 					}`}
 				>
 					{cours[session]?.body?.subtitle?.txt}
 				</h4>
 				{cours[session].body?.text?.map((el) => (
-					<div className='w-full flex flex-col gap-3 px-4' key={nanoid()}>
+					<div className='w-full flex flex-col gap-3 px-4 sm:px-5' key={nanoid()}>
 
 						{/*  TITRE DU CHAPITRE  */}
 						{el?.title && (
 							<h4
-								className={`font-semibold text-2xl border-t-2 border-purple-300  pt-8 mt-3 ${
+								className={`font-semibold text-2xl md:text-xl border-t-2 border-purple-300  pt-8 mt-3 ${
 									el.title.color && el.title.color
 								}`}
 							>
@@ -55,7 +55,7 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 
 						{/* TEXTE NORMAL */}
 						{el?.body?.map((item) => (
-							<p key={nanoid()} className={`text-justify md:text-left text-lg pl-2 ${item.bold && 'font-bold'}`}>
+							<p key={nanoid()} className={`text-justify md:text-left sm:text-justify text-lg md:text-base pl-2 ${item.bold && 'font-bold'}`}>
 								{item?.txt}
 							</p>
 						))}
@@ -73,7 +73,7 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 
 						{/* CODE EXAMPLE */}
 						{el?.sample?.map((code) => (
-							<div className='w-full' key={nanoid()}>
+							<div className='w-full mx-auto md:w-[320px]' key={nanoid()}>
 								<SyntaxCode language={code?.style}>{code?.code}</SyntaxCode>
 							</div>
 						))}

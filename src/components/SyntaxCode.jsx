@@ -7,7 +7,7 @@ SyntaxHighlighter.registerLanguage('jsx', jsx);
 
 const SyntaxCode = ({ children, language }) => {
 	return (
-		<div className='mt-3'>
+		<div className='mt-3 w-full mx-auto'>
 			<SyntaxHighlighter
 				language={language}
 				style={vsdarkplus}
