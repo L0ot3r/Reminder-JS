@@ -29,8 +29,10 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 					{cours[session]?.body?.subtitle?.txt}
 				</h4>
 				{cours[session].body?.text?.map((el) => (
-					<div className='w-full flex flex-col gap-3 px-4 sm:px-5' key={nanoid()}>
-
+					<div
+						className='w-full flex flex-col gap-3 px-4 sm:px-5'
+						key={nanoid()}
+					>
 						{/*  TITRE DU CHAPITRE  */}
 						{el?.title && (
 							<h4
@@ -45,21 +47,30 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 						{/* SEPARATEUR */}
 						{el?.hr && <hr className='border-t-2 border-slate-300 my-5' />}
 
-						{/* LISTE A PUCES */}
-						{el?.isList &&
-							el?.body?.map((item) => (
-								<li key={nanoid()} className={`py-0 pl-10 list-disc ${item.bold && 'font-bold'}`}>
-									{item?.txt}
-								</li>
-							))}
-
-						{/* TEXTE NORMAL */}
-						{el?.body?.map((item) => (
-							<p key={nanoid()} className={`text-justify md:text-left sm:text-justify text-lg md:text-base pl-2 ${item.bold && 'font-bold'}`}>
-								{item?.txt}
-							</p>
-						))}
-
+						{el?.isList
+							? el?.body?.map((item) => (
+									// /* LISTE A PUCES */
+									<li
+										key={nanoid()}
+										className={`py-0 pl-10 list-disc ${
+											item?.bold && 'font-bold'
+										}`}
+									>
+										{item?.txt}
+									</li>
+							  ))
+							: el?.body?.map((item) => (
+									// /* TEXTE NORMAL */
+									<p
+										key={nanoid()}
+										className={`text-justify md:text-left sm:text-justify text-lg md:text-base pl-2 ${
+											item?.bold && 'font-bold'
+										}`}
+									>
+										{item?.txt}
+									</p>
+							  ))}
+								
 						{/* IMAGE */}
 						{el?.img && (
 							<img

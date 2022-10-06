@@ -758,6 +758,7 @@ ReactDOM.render(
 							isList: true,
 							body: [
 								{
+									bold: true,
 									txt: `Functional components`
 								}
 							],
@@ -795,6 +796,7 @@ ReactDOM.render(
 							isList: true,
 							body: [
 								{
+									bold: true,
 									txt: `Class components`
 								}
 							]
@@ -888,6 +890,7 @@ const MyComponent = () => {
 				btnSlug: `Que sont les props dans React ?`,
 				body: {
 					subtitle: {
+						color: 'text-red-500',
 						txt: 'Introduction'
 					},
 					text: [

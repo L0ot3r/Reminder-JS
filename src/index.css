@@ -25,10 +25,10 @@ code {
     monospace;
 }
 
+
 .list-aside {
   width: 100%;
 }
-
 
 .container-btn-aside {
   padding: 8px 0 8px 4px;
@@ -41,19 +41,15 @@ code {
 }
 
 .list-aside-btn {
-  opacity: 0;
-
   width: max-content;
   padding: 4px 10px;
   font-weight: 500;
   border-radius: 4px;
-
+  
+  opacity: 0;
   transform: translateX(-50%);
-  z-index: -1;
-
   transition: all 0.4s ease-in-out;
 }
-
 .list-aside:hover .list-aside-btn {
   transform: translateX(0);
   box-shadow: 1px 2px 8px #333;
