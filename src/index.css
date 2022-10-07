@@ -25,39 +25,34 @@ code {
     monospace;
 }
 
-
-.list-aside {
-  width: 100%;
-}
-
 .container-btn-aside {
   padding: 8px 0 8px 4px;
 }
 
-.icons-side{
+.icons-side {
   cursor: pointer;
   color: #f08989;
-  position: absolute;
 }
 
-.list-aside-btn {
-  width: max-content;
+.list-aside {
   padding: 4px 10px;
   font-weight: 500;
+  font-size: large;
   border-radius: 4px;
-  
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: all 0.4s ease-in-out;
-}
-.list-aside:hover .list-aside-btn {
-  transform: translateX(0);
-  box-shadow: 1px 2px 8px #333;
   background: #884343;
   color: #f2f2f2;
-  opacity: 1;
+  box-shadow: 1px 2px 8px #333;
+  
+  transition: all 0.4s ease-in-out;
 }
-.list-aside:hover .icons-side {
-  transition-delay: 0.2s;
-  opacity: 0;
+.list-aside-btn {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: start;
 }
+.list-aside-btn:hover {
+  background: #8b5656;
+}
+
+
+

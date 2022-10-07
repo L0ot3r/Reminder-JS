@@ -10,7 +10,7 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 	const subtitle = cours[session]?.body?.subtitle?.color;
 
 	return (
-		<div className=' h-auto w-full flex items-start'>
+		<div className='h-auto w-full flex items-start'>
 			<SideBar
 				session={session}
 				setSession={setSession}
