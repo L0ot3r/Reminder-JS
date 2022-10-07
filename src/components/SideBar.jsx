@@ -2,21 +2,6 @@ import React, { useState } from 'react';
 import { data } from '../constants/cours';
 import { VscNotebook } from 'react-icons/vsc';
 
-const btn = `
-	w-full 
-	py-2 
-	px-4 
-	font-semibold 
-	bg-transparent 
-	hover:bg-purple-600 
-	text-blue-700 
-	hover:text-white 
-	border 
-	hover:border-transparent 
-	border-blue-500 
-	rounded
-	transition ease-in-out duration-500
-`;
 
 const SideBar = ({ setSession, categories }) => {
 	const categorie = data.filter((item) => item.categorie === categories);
