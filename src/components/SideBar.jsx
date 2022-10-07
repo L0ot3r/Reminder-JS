@@ -29,7 +29,7 @@ const SideBar = ({ setSession, categories }) => {
 	};
 
 	return (
-		<aside className='w-[50px] h-full border-r-2 border-slate-300 sm:hidden'>
+		<aside className='w-[50px] h-full border-r-2 border-slate-300'>
 			<ul
 				className={`sticky flex flex-col w-max md:justify-center items-center gap-2 pt-5 top-[40px]`}
 			>
