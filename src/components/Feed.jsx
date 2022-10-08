@@ -35,7 +35,7 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 						key={nanoid()}
 					>
 						{el?.body?.map((item) => (
-							<>
+							<div key={nanoid()}>
 								{/*  TITRE DU CHAPITRE  */}
 								{item?.title && (
 									<h4
@@ -120,7 +120,7 @@ const Feed = ({ session, categories, setSession, setCategories }) => {
 										/>
 									</pre>
 								)}
-							</>
+							</div>
 						))}
 					</div>
 				))}

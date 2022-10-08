@@ -1,3 +1,4 @@
+
 export const data = [
 	{
 		categorie: 'js',
@@ -504,7 +505,38 @@ export const data = [
 									txt: `Nous devons apprendre ce qu'est un composant React, la philosophie de React ainsi que la hiérarchie de notre application.`,
 								},
 								{
+									bold: true,
 									txt: `Débutons !`,
+								},
+								{
+									img: {
+										src: 'https://storage.googleapis.com/quest_editor_uploads/NEhAhcWv1jifF2hqDKow7EZC3Qm1Hq4v.jpeg',
+										width: '800px'
+									}
+								},
+								{
+									txt: `🤓 À la fin de cette quête, tu seras capable de comprendre ce qui suit:`,
+									bold: true
+								},
+								{
+									txt: `✅ Qu'est-ce qu'un composant React`,
+									semiBold: true,
+									isList: true
+								},
+								{
+									txt: `✅ Quelle est la hiérarchie des composants React`,
+									semiBold: true,
+									isList: true
+								},
+								{
+									txt: `✅ Pourquoi utilisons-nous des composants`,
+									semiBold: true,
+									isList: true
+								},
+								{
+									txt: `✅ Comment décomposer une UI en composants`,
+									semiBold: true,
+									isList: true
 								},
 								{
 									title: {
